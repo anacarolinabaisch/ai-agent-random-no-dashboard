@@ -519,6 +519,17 @@ const AGENTS = {
   }
 };
 
+const TOKENS = {
+  'k7m2xQ9p': 'michelle',
+  'Tz4wR8nL': 'camila',
+  'vB6jY3dH': 'angel',
+  'eN1cF5gS': 'carolina',
+  'qA8uW0mK': 'nathalia',
+  'hJ3rX7bP': 'lucas',
+  'sD9fL2yV': 'douglas'
+};
+const TOKEN_BY_AGENT = Object.fromEntries(Object.entries(TOKENS).map(([t,a])=>[a,t]));
+
 const AGENT_KEYS = Object.keys(AGENTS);
 
 function getTeamTotals() {
@@ -562,14 +573,15 @@ function readUrlParams() {
   const p = new URLSearchParams(window.location.search);
   if(p.get('from')) state.from = p.get('from');
   if(p.get('to'))   state.to   = p.get('to');
-  if(p.get('analyst') && AGENTS[p.get('analyst')]) state.analyst = p.get('analyst');
+  const token = p.get('t');
+  if(token && TOKENS[token]) state.analyst = TOKENS[token];
 }
 
 function updateUrl() {
   const p = new URLSearchParams();
   if(state.from !== '2026-02-20') p.set('from', state.from);
   if(state.to   !== '2026-03-27') p.set('to',   state.to);
-  if(state.analyst !== 'all')     p.set('analyst', state.analyst);
+  if(state.analyst !== 'all')     p.set('t', TOKEN_BY_AGENT[state.analyst]);
   const url = window.location.pathname + (p.toString() ? '?' + p.toString() : '');
   window.history.replaceState({}, '', url);
 }
@@ -971,7 +983,7 @@ function buildShareUrl() {
   const p = new URLSearchParams();
   if(state.from !== '2026-02-20') p.set('from', state.from);
   if(state.to   !== '2026-03-27') p.set('to',   state.to);
-  if(state.analyst !== 'all')     p.set('analyst', state.analyst);
+  if(state.analyst !== 'all')     p.set('t', TOKEN_BY_AGENT[state.analyst]);
   return window.location.pathname + (p.toString() ? '?'+p.toString() : '');
 }
 
@@ -1043,10 +1055,18 @@ document.getElementById('dateTo').value   = state.to;
 document.getElementById('analystSelect').value = state.analyst;
 
 // ── ANALYST LOCK ──────────────────────────────────────────────────────────
-// When the URL contains ?analyst=X, lock the view to that person only.
-// No other analyst's individual data is visible in locked mode.
-const _lockedByUrl = new URLSearchParams(window.location.search).get('analyst');
-if (_lockedByUrl && AGENTS[_lockedByUrl]) {
+// When the URL contains ?t=TOKEN, lock the view to that person only.
+const _urlToken = new URLSearchParams(window.location.search).get('t');
+const _lockedByUrl = _urlToken && TOKENS[_urlToken] ? TOKENS[_urlToken] : null;
+if (_urlToken && !_lockedByUrl) {
+  document.querySelector('.page').innerHTML = `
+    <div style="display:flex;align-items:center;justify-content:center;min-height:60vh;flex-direction:column;gap:1rem;text-align:center">
+      <div style="font-size:2.5rem">🔒</div>
+      <h2 style="color:#fff;font-size:1.2rem;font-weight:700">Link inválido</h2>
+      <p style="color:var(--muted);font-size:0.82rem;max-width:360px">Este token de acesso não é válido ou expirou. Solicite um novo link ao seu gestor.</p>
+    </div>`;
+  document.querySelector('.filterbar').style.display = 'none';
+} else if (_lockedByUrl && AGENTS[_lockedByUrl]) {
   const ag = AGENTS[_lockedByUrl];
 
   // 1. Hide sections that reveal cross-analyst comparisons
