@@ -998,6 +998,9 @@ function renderAll() {
   renderAgentPie();
   renderQualityChart();
   updateUrl();
+
+  const insightsEl = document.getElementById('insights');
+  if (insightsEl) insightsEl.style.display = state.analyst === 'all' ? '' : 'none';
 }
 
 // ===================== EVENTS =====================
