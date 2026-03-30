@@ -1038,6 +1038,60 @@ readUrlParams();
 document.getElementById('dateFrom').value = state.from;
 document.getElementById('dateTo').value   = state.to;
 document.getElementById('analystSelect').value = state.analyst;
+
+// ── ANALYST LOCK ──────────────────────────────────────────────────────────
+// When the URL contains ?analyst=X, lock the view to that person only.
+// No other analyst's individual data is visible in locked mode.
+const _lockedByUrl = new URLSearchParams(window.location.search).get('analyst');
+if (_lockedByUrl && AGENTS[_lockedByUrl]) {
+  const ag = AGENTS[_lockedByUrl];
+
+  // 1. Hide sections that reveal cross-analyst comparisons
+  ['agentes', 'timeline', 'insights'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+  });
+
+  // 2. Hide "Errors by Agent" chart (names + individual breakdowns)
+  const errByAgentEl = document.getElementById('errByAgentChart');
+  if (errByAgentEl) errByAgentEl.closest('.card').style.display = 'none';
+
+  // 3. Remove nav links that lead to hidden sections
+  ['#agentes', '#timeline', '#insights'].forEach(href => {
+    const a = document.querySelector(`nav a[href="${href}"]`);
+    if (a) a.remove();
+  });
+
+  // 4. Lock analyst selector — replace dropdown with read-only badge
+  const analystGroup = document.getElementById('analystSelect').closest('.filter-group');
+  analystGroup.innerHTML = `
+    <span class="filter-label">Analista</span>
+    <span style="font-size:0.73rem;font-weight:700;padding:4px 12px;border-radius:6px;
+      background:${ag.color}18;border:1px solid ${ag.color}55;color:${ag.color};
+      white-space:nowrap;display:inline-flex;align-items:center;gap:6px">
+      <span style="width:8px;height:8px;border-radius:50%;background:${ag.color};display:inline-block"></span>
+      ${ag.short}
+    </span>`;
+
+  // 5. Hide Reset button (would unlock view to "Todos")
+  const resetBtn = document.querySelector('button[onclick="resetFilters()"]');
+  if (resetBtn) resetBtn.style.display = 'none';
+
+  // 6. Set page title to analyst name
+  document.title = `${ag.short} · ai-agent-random-no`;
+
+  // 7. Add a lock notice below the filterbar
+  const notice = document.createElement('div');
+  notice.style.cssText = `
+    background:rgba(139,92,246,0.06);border-bottom:1px solid rgba(139,92,246,0.15);
+    padding:6px 2rem;font-size:0.68rem;color:var(--muted);display:flex;
+    align-items:center;gap:6px`;
+  notice.innerHTML = `<span style="color:var(--purple)">🔒</span>
+    Você está visualizando apenas seus próprios dados. Os resultados dos demais analistas não são visíveis nesta visão.`;
+  document.querySelector('.filterbar').insertAdjacentElement('afterend', notice);
+}
+// ─────────────────────────────────────────────────────────────────────────
+
 renderStaticDonuts();
 renderErrorCharts();
 renderAll();
