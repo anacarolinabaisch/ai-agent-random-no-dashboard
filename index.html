@@ -185,9 +185,9 @@ section{margin-bottom:2.5rem;scroll-margin-top:110px}
 <div class="filterbar">
   <div class="filter-group">
     <span class="filter-label">Período</span>
-    <input type="date" id="dateFrom" class="filter-input" value="2026-02-20" min="2026-02-20" max="2026-03-27"/>
+    <input type="date" id="dateFrom" class="filter-input" value="2026-02-20" min="2026-02-20" max="2026-04-01"/>
     <span style="color:var(--muted)">→</span>
-    <input type="date" id="dateTo" class="filter-input" value="2026-03-27" min="2026-02-20" max="2026-03-27"/>
+    <input type="date" id="dateTo" class="filter-input" value="2026-04-01" min="2026-02-20" max="2026-04-01"/>
   </div>
   <div class="filter-divider"></div>
   <div class="filter-group">
@@ -236,12 +236,12 @@ section{margin-bottom:2.5rem;scroll-margin-top:110px}
 <!-- HERO -->
 <div class="hero">
   <h1>data-labeling-ai-agent-random-no</h1>
-  <div class="meta">br__series_contract.nelson_muntz_labels · Análise completa · 30 Mar 2026</div>
+  <div class="meta">br__series_contract.nelson_muntz_labels · Análise completa · 01 Abr 2026</div>
   <div class="tags">
     <span class="tag tag-p"><span class="dot" style="background:var(--purple)"></span><span id="heroTotalCases">834 casos</span></span>
-    <span class="tag tag-g"><span class="dot" style="background:var(--green)"></span>95,3% assertividade global</span>
+    <span class="tag tag-g"><span class="dot" style="background:var(--green)"></span>94,3% assertividade global</span>
     <span class="tag tag-b"><span class="dot" style="background:var(--blue)"></span>7 anotadores humanos</span>
-    <span class="tag tag-y"><span class="dot" style="background:var(--yellow)"></span><span id="heroPeriod">Fev–Mar 2026</span></span>
+    <span class="tag tag-y"><span class="dot" style="background:var(--yellow)"></span><span id="heroPeriod">Fev–Abr 2026</span></span>
   </div>
 </div>
 
@@ -250,12 +250,12 @@ section{margin-bottom:2.5rem;scroll-margin-top:110px}
   <div class="sec-title">Overview</div>
   <div class="kpi-grid">
     <div class="kpi"><div class="kpi-label">Casos Analisados</div><div class="kpi-val kv-c" id="kpiCases">834</div><div class="kpi-sub" id="kpiCasesSub">UIDs únicos</div></div>
-    <div class="kpi"><div class="kpi-label">Total de Labels</div><div class="kpi-val kv-p" id="kpiLabels">7.441</div><div class="kpi-sub">~8,9 por caso</div></div>
+    <div class="kpi"><div class="kpi-label">Total de Labels</div><div class="kpi-val kv-p" id="kpiLabels">10.744</div><div class="kpi-sub">~8,9 por caso</div></div>
     <div class="kpi"><div class="kpi-label">Anotadores</div><div class="kpi-val kv-w" id="kpiAgents">7</div><div class="kpi-sub" id="kpiAgentsSub">100% humanos</div></div>
-    <div class="kpi"><div class="kpi-label">Assertividade</div><div class="kpi-val kv-g">95,3%</div><div class="kpi-sub">decision = Yes</div><div class="kpi-note">* período total</div></div>
-    <div class="kpi"><div class="kpi-label">Erro de Processo</div><div class="kpi-val kv-y">28,9%</div><div class="kpi-sub">error-process = No</div><div class="kpi-note">* período total</div></div>
-    <div class="kpi"><div class="kpi-label">Side Effect NOK</div><div class="kpi-val kv-r">11,5%</div><div class="kpi-sub">e-mail/push indevido</div><div class="kpi-note">* período total</div></div>
-    <div class="kpi"><div class="kpi-label">Contestações</div><div class="kpi-val kv-w">2,5%</div><div class="kpi-sub">19 de 770 casos</div><div class="kpi-note">* período total</div></div>
+    <div class="kpi"><div class="kpi-label">Assertividade</div><div class="kpi-val kv-g">94,3%</div><div class="kpi-sub">decision = Yes</div><div class="kpi-note">* período total</div></div>
+    <div class="kpi"><div class="kpi-label">Erro de Processo</div><div class="kpi-val kv-y">27,6%</div><div class="kpi-sub">error-process = No</div><div class="kpi-note">* período total</div></div>
+    <div class="kpi"><div class="kpi-label">Side Effect NOK</div><div class="kpi-val kv-r">8,1%</div><div class="kpi-sub">e-mail/push indevido</div><div class="kpi-note">* período total</div></div>
+    <div class="kpi"><div class="kpi-label">Contestações</div><div class="kpi-val kv-w">2,6%</div><div class="kpi-sub">30 de 1.137 casos</div><div class="kpi-note">* período total</div></div>
     <div class="kpi"><div class="kpi-label">Dias Ativos</div><div class="kpi-val kv-w" id="kpiDays">13</div><div class="kpi-sub" id="kpiDaysSub">com atividade</div></div>
   </div>
 
@@ -279,24 +279,24 @@ section{margin-bottom:2.5rem;scroll-margin-top:110px}
       <div class="card-title">Decisão da IA (decision)</div>
       <canvas id="decisionChart" height="160"></canvas>
       <div style="display:flex;justify-content:center;gap:1.2rem;margin-top:0.7rem;font-size:0.72rem">
-        <span style="color:var(--green)">● 95,3% Correto (795)</span>
-        <span style="color:var(--red)">● 4,7% Incorreto (39)</span>
+        <span style="color:var(--green)">● 94,3% Correto (1.132)</span>
+        <span style="color:var(--red)">● 5,7% Incorreto (69)</span>
       </div>
     </div>
     <div class="card">
       <div class="card-title">Erro de Processo (error-process)</div>
       <canvas id="errorProcChart" height="160"></canvas>
       <div style="display:flex;justify-content:center;gap:1.2rem;margin-top:0.7rem;font-size:0.72rem">
-        <span style="color:var(--green)">● 71,1% Sem erro (593)</span>
-        <span style="color:var(--yellow)">● 28,9% Com erro (241)</span>
+        <span style="color:var(--green)">● 72,4% Sem erro (870)</span>
+        <span style="color:var(--yellow)">● 27,6% Com erro (331)</span>
       </div>
     </div>
     <div class="card">
       <div class="card-title">Side Effects (check-side-effects)</div>
       <canvas id="sideEffectChart" height="160"></canvas>
       <div style="display:flex;justify-content:center;gap:1.2rem;margin-top:0.7rem;font-size:0.72rem">
-        <span style="color:var(--green)">● 88,5% OK (738)</span>
-        <span style="color:var(--red)">● 11,5% NOK (96)</span>
+        <span style="color:var(--green)">● 91,9% OK (1.104)</span>
+        <span style="color:var(--red)">● 8,1% NOK (97)</span>
       </div>
     </div>
   </div>
@@ -304,25 +304,25 @@ section{margin-bottom:2.5rem;scroll-margin-top:110px}
   <div class="grid-2">
     <div class="card">
       <div class="card-title">Contestação e Reclamação</div>
-      <div class="bar-row"><span class="bar-lbl w180">🔴 Sem contestação</span><div class="bar-track"><div class="bar-fill" style="width:97.5%;background:var(--dim)"></div></div><span class="bar-pct" style="color:var(--muted)">97,5%</span><span class="bar-n">751</span></div>
-      <div class="bar-row"><span class="bar-lbl w180">🟢 Com contestação</span><div class="bar-track"><div class="bar-fill" style="width:2.5%;background:var(--green)"></div></div><span class="bar-pct" style="color:var(--green)">2,5%</span><span class="bar-n">19</span></div>
+      <div class="bar-row"><span class="bar-lbl w180">🔴 Sem contestação</span><div class="bar-track"><div class="bar-fill" style="width:97.4%;background:var(--dim)"></div></div><span class="bar-pct" style="color:var(--muted)">97,4%</span><span class="bar-n">1.107</span></div>
+      <div class="bar-row"><span class="bar-lbl w180">🟢 Com contestação</span><div class="bar-track"><div class="bar-fill" style="width:2.6%;background:var(--green)"></div></div><span class="bar-pct" style="color:var(--green)">2,6%</span><span class="bar-n">30</span></div>
       <div style="height:0.8rem"></div>
       <div class="bar-row"><span class="bar-lbl w180">Sem reclamação formal</span><div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--dim)"></div></div><span class="bar-pct" style="color:var(--muted)">100%</span><span class="bar-n">64</span></div>
       <div style="height:0.8rem"></div>
       <div class="card-title" style="margin-top:0.5rem">IA ignorou informação? (information-not-considered)</div>
-      <div class="bar-row"><span class="bar-lbl w180">🟢 Sim (considerou tudo)</span><div class="bar-track"><div class="bar-fill" style="width:97.4%;background:var(--green)"></div></div><span class="bar-pct" style="color:var(--green)">97,4%</span><span class="bar-n">748</span></div>
-      <div class="bar-row"><span class="bar-lbl w180">🔴 Não (ignorou algo)</span><div class="bar-track"><div class="bar-fill" style="width:2.6%;background:var(--red)"></div></div><span class="bar-pct" style="color:var(--red)">2,6%</span><span class="bar-n">20</span></div>
+      <div class="bar-row"><span class="bar-lbl w180">🟢 Sim (considerou tudo)</span><div class="bar-track"><div class="bar-fill" style="width:97.2%;background:var(--green)"></div></div><span class="bar-pct" style="color:var(--green)">97,2%</span><span class="bar-n">1.103</span></div>
+      <div class="bar-row"><span class="bar-lbl w180">🔴 Não (ignorou algo)</span><div class="bar-track"><div class="bar-fill" style="width:2.8%;background:var(--red)"></div></div><span class="bar-pct" style="color:var(--red)">2,8%</span><span class="bar-n">32</span></div>
     </div>
     <div class="card">
       <div class="card-title">Informações Ignoradas pela IA (information-not-considereds)</div>
-      <div class="bar-row"><span class="bar-lbl w180">(nenhuma)</span><div class="bar-track"><div class="bar-fill" style="width:95%;background:var(--dim)"></div></div><span class="bar-pct" style="color:var(--muted)">95,1%</span><span class="bar-n">793</span></div>
-      <div class="bar-row"><span class="bar-lbl w180">📎 Evidência externa</span><div class="bar-track"><div class="bar-fill" style="width:21%;background:var(--purple)"></div></div><span class="bar-pct" style="color:var(--purple2)">1,1%</span><span class="bar-n">9</span></div>
-      <div class="bar-row"><span class="bar-lbl w180">🔄 Reports coexistindo</span><div class="bar-track"><div class="bar-fill" style="width:14%;background:var(--blue)"></div></div><span class="bar-pct" style="color:var(--blue)">0,7%</span><span class="bar-n">6</span></div>
-      <div class="bar-row"><span class="bar-lbl w180">📐 Triangulação</span><div class="bar-track"><div class="bar-fill" style="width:14%;background:var(--cyan)"></div></div><span class="bar-pct" style="color:var(--cyan)">0,7%</span><span class="bar-n">6</span></div>
-      <div class="bar-row"><span class="bar-lbl w180">📁 Reports proativos arq.</span><div class="bar-track"><div class="bar-fill" style="width:12%;background:var(--yellow)"></div></div><span class="bar-pct" style="color:var(--yellow)">0,6%</span><span class="bar-n">5</span></div>
-      <div class="bar-row"><span class="bar-lbl w180">🔑 Chave Pix suspeita</span><div class="bar-track"><div class="bar-fill" style="width:12%;background:var(--yellow)"></div></div><span class="bar-pct" style="color:var(--yellow)">0,6%</span><span class="bar-n">5</span></div>
-      <div class="bar-row"><span class="bar-lbl w180">🚧 Cercadinho</span><div class="bar-track"><div class="bar-fill" style="width:12%;background:var(--yellow)"></div></div><span class="bar-pct" style="color:var(--yellow)">0,6%</span><span class="bar-n">5</span></div>
-      <div class="bar-row"><span class="bar-lbl w180">📄 Boleto suspeito</span><div class="bar-track"><div class="bar-fill" style="width:5%;background:var(--red)"></div></div><span class="bar-pct" style="color:var(--red)">0,2%</span><span class="bar-n">2</span></div>
+      <div class="bar-row"><span class="bar-lbl w180">(nenhuma)</span><div class="bar-track"><div class="bar-fill" style="width:95%;background:var(--dim)"></div></div><span class="bar-pct" style="color:var(--muted)">73,3%</span><span class="bar-n">880</span></div>
+      <div class="bar-row"><span class="bar-lbl w180">⏳ Tempo de conta</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:var(--purple)"></div></div><span class="bar-pct" style="color:var(--purple2)">15,6%</span><span class="bar-n">187</span></div>
+      <div class="bar-row"><span class="bar-lbl w180">🚨 Contrapartes fraud.</span><div class="bar-track"><div class="bar-fill" style="width:30%;background:var(--red)"></div></div><span class="bar-pct" style="color:var(--red)">8,1%</span><span class="bar-n">97</span></div>
+      <div class="bar-row"><span class="bar-lbl w180">💥 Colisões</span><div class="bar-track"><div class="bar-fill" style="width:14%;background:var(--blue)"></div></div><span class="bar-pct" style="color:var(--blue)">3,8%</span><span class="bar-n">45</span></div>
+      <div class="bar-row"><span class="bar-lbl w180">⏱️ Timing</span><div class="bar-track"><div class="bar-fill" style="width:9%;background:var(--cyan)"></div></div><span class="bar-pct" style="color:var(--cyan)">2,4%</span><span class="bar-n">29</span></div>
+      <div class="bar-row"><span class="bar-lbl w180">💰 Transações</span><div class="bar-track"><div class="bar-fill" style="width:8%;background:var(--yellow)"></div></div><span class="bar-pct" style="color:var(--yellow)">2,2%</span><span class="bar-n">26</span></div>
+      <div class="bar-row"><span class="bar-lbl w180">📋 Contestações prévias</span><div class="bar-track"><div class="bar-fill" style="width:3%;background:var(--green)"></div></div><span class="bar-pct" style="color:var(--green)">0,7%</span><span class="bar-n">8</span></div>
+      <div class="bar-row"><span class="bar-lbl w180">📡 Outros</span><div class="bar-track"><div class="bar-fill" style="width:3%;background:var(--dim)"></div></div><span class="bar-pct" style="color:var(--muted)">1,7%</span><span class="bar-n">20</span></div>
     </div>
   </div>
 </section>
@@ -392,7 +392,8 @@ section{margin-bottom:2.5rem;scroll-margin-top:110px}
         <div class="tl-item"><div class="tl-dot" style="background:#22c55e"></div><div class="tl-week">02–06 Mar 2026 — Crescimento</div><div class="tl-main">3 anotadores regulares consolidados</div><div class="tl-sub">159 casos · 1.431 labels · michelle + camila + angel</div></div>
         <div class="tl-item"><div class="tl-dot" style="background:#f59e0b"></div><div class="tl-week">09–13 Mar 2026 — Pico 🔝</div><div class="tl-main">Semana de maior volume de toda a fila</div><div class="tl-sub">325 casos · 2.925 labels · michelle (121), camila (129), angel (75)</div></div>
         <div class="tl-item"><div class="tl-dot" style="background:#64748b"></div><div class="tl-week">16–20 Mar 2026 — Desaceleração</div><div class="tl-main">Redução de anotadores ativos</div><div class="tl-sub">204 casos · 1.836 labels · michelle (145) + camila (59)</div></div>
-        <div class="tl-item"><div class="tl-dot" style="background:#ef4444"></div><div class="tl-week">23–27 Mar 2026 — Última semana</div><div class="tl-main">Apenas michelle.santos ativa</div><div class="tl-sub">78 casos · 702 labels</div></div>
+        <div class="tl-item"><div class="tl-dot" style="background:#ef4444"></div><div class="tl-week">23–27 Mar 2026</div><div class="tl-main">Apenas michelle.santos ativa</div><div class="tl-sub">78 casos · 702 labels</div></div>
+        <div class="tl-item"><div class="tl-dot" style="background:#22c55e"></div><div class="tl-week">30 Mar–01 Abr 2026 — Retomada 🔥</div><div class="tl-main">michelle + camila voltam com força total</div><div class="tl-sub">366 casos · 3.303 labels · michelle (174), camila (193)</div></div>
       </div>
     </div>
     <div class="card">
@@ -415,14 +416,14 @@ section{margin-bottom:2.5rem;scroll-margin-top:110px}
 <section id="insights">
   <div class="sec-title">Insights & Observações</div>
   <div class="insight-grid">
-    <div class="insight"><div class="insight-icon">🎯</div><div class="insight-title">Alta Assertividade Global</div><div class="insight-body">95,3% dos casos foram marcados como corretos. michelle (98,4%) e angel (98,3%) lideram. camila teve 88,8%, ligeiramente abaixo da média da fila.</div></div>
-    <div class="insight"><div class="insight-icon">⚠️</div><div class="insight-title">Erro de Processo é o Principal Gap</div><div class="insight-body">28,9% dos casos com erro de processo. carolina registrou 84,6% de erro no único dia ativo. camila também teve 61,6% — vale verificar se houve mudança de regra naquele período.</div></div>
-    <div class="insight"><div class="insight-icon">📧</div><div class="insight-title">Side Effects Concentrados em 2 Agentes</div><div class="insight-body">100% dos casos NOK foram de camila (19,2%) e angel (40,0%). michelle não registrou nenhum NOK em 439 casos — referência de boa prática na fila.</div></div>
-    <div class="insight"><div class="insight-icon">📈</div><div class="insight-title">michelle.santos é a Âncora da Fila</div><div class="insight-body">Responsável por 52,6% de todos os casos (439/834). Única ativa na última semana. Melhor equilíbrio entre volume, assertividade e zero side effects.</div></div>
-    <div class="insight"><div class="insight-icon">🤖</div><div class="insight-title">Viés Positivo é o Erro Mais Comum</div><div class="insight-body">22,1% dos casos com erro de classificação apresentaram viés positivo. camila detectou 158 dos 169 casos de viés positivo — 93% do total desse tipo de erro.</div></div>
-    <div class="insight"><div class="insight-icon">⏳</div><div class="insight-title">Tempo de Conta é a Categoria #1 de Erro</div><div class="insight-body">13,8% dos erros por categoria: a IA ignora o histórico de tenure do cliente. Principal gap de dados identificado — potencial melhoria no prompt ou nos dados disponibilizados.</div></div>
-    <div class="insight"><div class="insight-icon">📅</div><div class="insight-title">Fila Jovem em Fase de Ramping</div><div class="insight-body">Apenas 36 dias de histórico. Pico na semana de 09/03 (325 casos), mas a última semana caiu para 78 — ritmo ainda instável, normal para uma fila em início de operação.</div></div>
-    <div class="insight"><div class="insight-icon">🔍</div><div class="insight-title">Baixíssimo Volume de Contestações</div><div class="insight-body">Apenas 2,5% dos casos com contestação do cliente (19/770) e 0% de reclamação formal. Pode mascarar a real taxa de impacto caso os erros não cheguem ao canal de contestação.</div></div>
+    <div class="insight"><div class="insight-icon">🎯</div><div class="insight-title">Alta Assertividade Global</div><div class="insight-body">94,3% dos casos foram marcados como corretos (1.132/1.201). A fila mantém alto nível de acerto da IA, com 69 decisões marcadas como incorretas.</div></div>
+    <div class="insight"><div class="insight-icon">⚠️</div><div class="insight-title">Erro de Processo é o Principal Gap</div><div class="insight-body">27,6% dos casos (331/1.201) com erro de processo. Taxa se mantém estável ao longo das semanas, indicando possível lacuna estrutural no processo da IA que merece investigação.</div></div>
+    <div class="insight"><div class="insight-icon">📧</div><div class="insight-title">Side Effects em Queda</div><div class="insight-body">Taxa de side effect NOK caiu de 11,5% para 8,1% com o aumento do volume. 97 casos com envio indevido de e-mail/push em 1.201 analisados.</div></div>
+    <div class="insight"><div class="insight-icon">📈</div><div class="insight-title">Retomada Forte na Semana 30/03</div><div class="insight-body">Após desaceleração, a semana 30/03–01/04 registrou 366 casos (recorde), superando o pico anterior de 325. Dois analistas ativos mantiveram o ritmo acelerado.</div></div>
+    <div class="insight"><div class="insight-icon">🤖</div><div class="insight-title">Viés Positivo é o Erro Mais Comum</div><div class="insight-body">269 casos com viés positivo identificado (22,4% do total). A IA tende a avaliar positivamente demais o perfil do cliente, ignorando sinais de alerta. Principal ponto para melhoria de prompt.</div></div>
+    <div class="insight"><div class="insight-icon">⏳</div><div class="insight-title">Tempo de Conta é a Categoria #1 de Erro</div><div class="insight-body">187 casos onde a IA ignorou o histórico de tenure do cliente (15,6%). Principal gap de dados identificado — potencial melhoria no prompt ou nos dados disponibilizados à IA.</div></div>
+    <div class="insight"><div class="insight-icon">📅</div><div class="insight-title">Fila em Crescimento Acelerado</div><div class="insight-body">41 dias de histórico, 1.201 casos. Após queda na semana 23/03 (78 casos), a semana 30/03 bateu recorde com 366 casos — a fila ganhou tração e ritmo consistente.</div></div>
+    <div class="insight"><div class="insight-icon">🔍</div><div class="insight-title">Baixíssimo Volume de Contestações</div><div class="insight-body">Apenas 2,6% dos casos com contestação (30/1.137) e 0% de reclamação formal. Pode mascarar a real taxa de impacto caso os erros não cheguem ao canal de contestação.</div></div>
   </div>
 </section>
 
@@ -438,32 +439,34 @@ Chart.defaults.font.size = 11;
 const AGENTS = {
   michelle: {
     key:'michelle.santos@nubank.com.br', short:'Michelle Santos', initials:'MS', color:'#8b5cf6',
-    totalCases:439, totalLabels:3916, daysActive:8,
-    assertiveness:98.4, errorProcess:7.5, sideEffectNok:0,
-    avgTimeSec:212.7, maxTimeSec:3204, period:'23/02 → 27/03',
-    decisionYes:432, decisionNo:7, processOk:406, processErr:33, sideOk:439, sideNok:0,
+    totalCases:613, totalLabels:5482, daysActive:12,
+    assertiveness:98.4, errorProcess:5.9, sideEffectNok:0,
+    avgTimeSec:217.8, maxTimeSec:3569, period:'23/02 → 01/04',
+    decisionYes:603, decisionNo:10, processOk:577, processErr:36, sideOk:613, sideNok:0,
     daily:{
-      '2026-02-23':{cases:35,min:23.9},'2026-03-05':{cases:46,min:140.2},
-      '2026-03-06':{cases:14,min:2.0},'2026-03-11':{cases:60,min:833.8},
-      '2026-03-12':{cases:56,min:445.2},'2026-03-13':{cases:5,min:603.2},
-      '2026-03-19':{cases:96,min:837.2},'2026-03-20':{cases:49,min:305.2},
-      '2026-03-27':{cases:78,min:523.3}
+      '2026-02-23':{cases:35,min:23.7},'2026-03-05':{cases:46,min:139.4},
+      '2026-03-06':{cases:14,min:1.7},'2026-03-11':{cases:60,min:569.2},
+      '2026-03-12':{cases:56,min:413.9},'2026-03-13':{cases:5,min:603.0},
+      '2026-03-19':{cases:96,min:659.3},'2026-03-20':{cases:49,min:356.8},
+      '2026-03-27':{cases:78,min:174.2},'2026-03-30':{cases:64,min:955.8},
+      '2026-03-31':{cases:48,min:160.8},'2026-04-01':{cases:62,min:114.3}
     },
-    errClass:{'positive-bias':1,'unreal-information':2,'incoherent-prompt':7,'information-not-considered':4}
+    errClass:{'positive-bias':1,'unreal-information':2,'incoherent-prompt':12,'information-not-considered':4}
   },
   camila: {
     key:'camila.bomfim@nubank.com.br', short:'Camila Bomfim', initials:'CB', color:'#06b6d4',
-    totalCases:250, totalLabels:2242, daysActive:7,
-    assertiveness:88.8, errorProcess:61.6, sideEffectNok:19.2,
-    avgTimeSec:113.1, maxTimeSec:2137, period:'23/02 → 19/03',
-    decisionYes:222, decisionNo:28, processOk:96, processErr:154, sideOk:202, sideNok:48,
+    totalCases:443, totalLabels:3979, daysActive:10,
+    assertiveness:87.6, errorProcess:54.4, sideEffectNok:11.1,
+    avgTimeSec:164.8, maxTimeSec:4281, period:'23/02 → 01/04',
+    decisionYes:388, decisionNo:55, processOk:202, processErr:241, sideOk:394, sideNok:49,
     daily:{
-      '2026-02-23':{cases:8,min:0.1},'2026-03-05':{cases:44,min:248.3},
-      '2026-03-06':{cases:10,min:1.2},'2026-03-11':{cases:66,min:715.6},
-      '2026-03-12':{cases:62,min:139.5},'2026-03-13':{cases:1,min:198.9},
-      '2026-03-19':{cases:59,min:311.4}
+      '2026-02-23':{cases:8,min:0.1},'2026-03-05':{cases:44,min:247.4},
+      '2026-03-06':{cases:10,min:0.9},'2026-03-11':{cases:66,min:134.4},
+      '2026-03-12':{cases:62,min:138.3},'2026-03-13':{cases:1,min:198.9},
+      '2026-03-19':{cases:59,min:118.2},'2026-03-30':{cases:45,min:708.0},
+      '2026-03-31':{cases:82,min:263.2},'2026-04-01':{cases:66,min:325.4}
     },
-    errClass:{'positive-bias':158,'unreal-information':3,'information-not-considered':6,'negative-bias':1}
+    errClass:{'positive-bias':240,'unreal-information':10,'information-not-considered':6,'negative-bias':2}
   },
   angel: {
     key:'angel.roberto@nubank.com.br', short:'Angel Roberto', initials:'AR', color:'#22c55e',
@@ -564,7 +567,7 @@ function getAllDailyData(analystKey) {
 // ===================== STATE =====================
 let state = {
   from: '2026-02-20',
-  to: '2026-03-27',
+  to: '2026-04-01',
   analyst: 'all'
 };
 
@@ -580,7 +583,7 @@ function readUrlParams() {
 function updateUrl() {
   const p = new URLSearchParams();
   if(state.from !== '2026-02-20') p.set('from', state.from);
-  if(state.to   !== '2026-03-27') p.set('to',   state.to);
+  if(state.to   !== '2026-04-01') p.set('to',   state.to);
   if(state.analyst !== 'all')     p.set('t', TOKEN_BY_AGENT[state.analyst]);
   const url = window.location.pathname + (p.toString() ? '?' + p.toString() : '');
   window.history.replaceState({}, '', url);
@@ -618,8 +621,8 @@ function destroyChart(id) {
 }
 
 // ===================== WEEK BUCKETS =====================
-const WEEK_STARTS = ['2026-02-16','2026-02-23','2026-03-02','2026-03-09','2026-03-16','2026-03-23'];
-const WEEK_LABELS = ['16/02','23/02','02/03','09/03','16/03','23/03'];
+const WEEK_STARTS = ['2026-02-16','2026-02-23','2026-03-02','2026-03-09','2026-03-16','2026-03-23','2026-03-30'];
+const WEEK_LABELS = ['16/02','23/02','02/03','09/03','16/03','23/03','30/03'];
 
 function getWeekIndex(date) {
   for(let i = WEEK_STARTS.length-1; i>=0; i--) {
@@ -631,8 +634,8 @@ function getWeekIndex(date) {
 function buildWeekData(analystKey) {
   const raw = getAllDailyData(analystKey);
   const filtered = filterDays(raw);
-  const cases  = new Array(6).fill(0);
-  const labels = new Array(6).fill(0);
+  const cases  = new Array(7).fill(0);
+  const labels = new Array(7).fill(0);
   Object.entries(filtered).forEach(([d, v]) => {
     const i = getWeekIndex(d);
     cases[i]  += v.cases;
@@ -725,7 +728,7 @@ function renderCalendar() {
   // All days in full range for layout
   const allDays = [];
   const d = new Date('2026-02-20');
-  const end = new Date('2026-03-27');
+  const end = new Date('2026-04-01');
   while(d <= end) {
     allDays.push(d.toISOString().slice(0,10));
     d.setDate(d.getDate()+1);
@@ -777,7 +780,7 @@ function renderAgentTable() {
     if(isHighlighted) tr.className = 'highlighted';
     tr.innerHTML = `
       <td><span class="avatar" style="background:${a.color}22;color:${a.color}">${a.initials}</span>${a.short}</td>
-      <td><strong style="color:var(--cyan)">${a.totalCases.toLocaleString('pt-BR')}</strong> <span style="color:var(--muted);font-size:0.67rem">(${(a.totalCases/834*100).toFixed(1)}%)</span></td>
+      <td><strong style="color:var(--cyan)">${a.totalCases.toLocaleString('pt-BR')}</strong> <span style="color:var(--muted);font-size:0.67rem">(${(a.totalCases/1201*100).toFixed(1)}%)</span></td>
       <td>${a.totalLabels.toLocaleString('pt-BR')}</td>
       <td>${a.daysActive}</td>
       <td><span class="pill ${pillClass(a.assertiveness,95,80)}">${a.assertiveness}%</span></td>
@@ -836,19 +839,19 @@ function renderErrorCharts() {
   new Chart(document.getElementById('errClassChart'), {
     type:'bar',
     data:{
-      labels:['(nenhum)','🟢 Viés positivo','⚠️ Info irreal','🟢+⚠️','🤷 Info n/ consid.','🤖 Prompt Incoer.','Viés negativo','Neg+Irreal','Outros'],
-      datasets:[{ data:[608,169,15,14,11,9,2,1,5], backgroundColor:['#1e2430','#8b5cf6','#f59e0b','#a855f7','#38bdf8','#06b6d4','#ef4444','#f87171','#64748b'], borderRadius:4 }]
+      labels:['(nenhum)','🟢 Viés positivo','⚠️ Info irreal','🟢+⚠️','🤖 Prompt Incoer.','🤷 Info n/ consid.','Viés negativo','🟢+🤷','Outros'],
+      datasets:[{ data:[882,249,20,16,14,11,3,3,3], backgroundColor:['#1e2430','#8b5cf6','#f59e0b','#a855f7','#06b6d4','#38bdf8','#ef4444','#10b981','#64748b'], borderRadius:4 }]
     },
-    options:{ indexAxis:'y', plugins:{ legend:{display:false}, tooltip:{callbacks:{label:c=>` ${c.parsed.x} (${(c.parsed.x/834*100).toFixed(1)}%)`}} }, scales:{ x:{grid:{color:'#1e2430'}}, y:{grid:{display:false}} } }
+    options:{ indexAxis:'y', plugins:{ legend:{display:false}, tooltip:{callbacks:{label:c=>` ${c.parsed.x} (${(c.parsed.x/1201*100).toFixed(1)}%)`}} }, scales:{ x:{grid:{color:'#1e2430'}}, y:{grid:{display:false}} } }
   });
 
   new Chart(document.getElementById('errCatChart'), {
     type:'bar',
     data:{
-      labels:['(nenhuma)','⏳ Tempo de conta','🚨 Contrapartes fraud.','Conta+Fraud.','💰 Transações','⏱️ Timing','💥 Colisões','Conta+Colisões','Outros'],
-      datasets:[{ data:[615,115,29,13,10,8,8,7,29], backgroundColor:['#1e2430','#8b5cf6','#ef4444','#a855f7','#f59e0b','#06b6d4','#22c55e','#10b981','#64748b'], borderRadius:4 }]
+      labels:['(nenhuma)','⏳ Tempo de conta','🚨 Contrapartes fraud.','Conta+Fraud.','💥 Colisões','💰 Transações','⏱️ Timing','Conta+Colisões','Outros'],
+      datasets:[{ data:[880,138,52,22,17,16,13,11,52], backgroundColor:['#1e2430','#8b5cf6','#ef4444','#a855f7','#22c55e','#f59e0b','#06b6d4','#10b981','#64748b'], borderRadius:4 }]
     },
-    options:{ indexAxis:'y', plugins:{ legend:{display:false}, tooltip:{callbacks:{label:c=>` ${c.parsed.x} (${(c.parsed.x/834*100).toFixed(1)}%)`}} }, scales:{ x:{grid:{color:'#1e2430'}}, y:{grid:{display:false}} } }
+    options:{ indexAxis:'y', plugins:{ legend:{display:false}, tooltip:{callbacks:{label:c=>` ${c.parsed.x} (${(c.parsed.x/1201*100).toFixed(1)}%)`}} }, scales:{ x:{grid:{color:'#1e2430'}}, y:{grid:{display:false}} } }
   });
 
   new Chart(document.getElementById('errByAgentChart'), {
@@ -856,11 +859,11 @@ function renderErrorCharts() {
     data:{
       labels:['Michelle','Camila','Angel','Carolina','Nathalia','Lucas','Douglas'],
       datasets:[
-        { label:'Viés positivo',     data:[1,158,24,1,0,2,0],  backgroundColor:'#8b5cf6', borderRadius:3 },
-        { label:'Info irreal',       data:[2,3,26,0,0,0,0],    backgroundColor:'#f59e0b', borderRadius:3 },
-        { label:'Prompt Incoerente', data:[7,0,1,0,2,0,1],     backgroundColor:'#06b6d4', borderRadius:3 },
-        { label:'Viés negativo',     data:[0,1,3,0,0,0,0],     backgroundColor:'#ef4444', borderRadius:3 },
-        { label:'Info n/ consider.', data:[4,6,0,1,1,1,0],     backgroundColor:'#38bdf8', borderRadius:3 },
+        { label:'Viés positivo',     data:[1,240,24,1,0,2,1],  backgroundColor:'#8b5cf6', borderRadius:3 },
+        { label:'Info irreal',       data:[2,10,26,0,0,0,0],   backgroundColor:'#f59e0b', borderRadius:3 },
+        { label:'Prompt Incoerente', data:[12,0,1,0,2,0,1],    backgroundColor:'#06b6d4', borderRadius:3 },
+        { label:'Viés negativo',     data:[0,2,3,0,0,0,0],     backgroundColor:'#ef4444', borderRadius:3 },
+        { label:'Info n/ consider.', data:[4,6,0,1,1,2,0],     backgroundColor:'#38bdf8', borderRadius:3 },
       ]
     },
     options:{
@@ -878,9 +881,9 @@ function renderStaticDonuts() {
       options:{ cutout:'68%', plugins:{ legend:{display:false} } }
     });
   }
-  donut('decisionChart',  [['✅ Correto',795],['❌ Incorreto',39]],     ['#22c55e','#ef4444']);
-  donut('errorProcChart', [['✅ Sem erro',593],['⚠️ Com erro',241]],    ['#22c55e','#f59e0b']);
-  donut('sideEffectChart',[['✅ OK',738],['📧 NOK',96]],               ['#22c55e','#ef4444']);
+  donut('decisionChart',  [['✅ Correto',1132],['❌ Incorreto',69]],     ['#22c55e','#ef4444']);
+  donut('errorProcChart', [['✅ Sem erro',870],['⚠️ Com erro',331]],    ['#22c55e','#f59e0b']);
+  donut('sideEffectChart',[['✅ OK',1104],['📧 NOK',97]],               ['#22c55e','#ef4444']);
 }
 
 // ===================== KPI UPDATE =====================
@@ -902,7 +905,7 @@ function updateKPIs() {
 function updateFilterBadge() {
   const badge = document.getElementById('filterBadge');
   const parts = [];
-  if(state.from !== '2026-02-20' || state.to !== '2026-03-27') {
+  if(state.from !== '2026-02-20' || state.to !== '2026-04-01') {
     const f = state.from.slice(5).split('-').reverse().join('/');
     const t = state.to.slice(5).split('-').reverse().join('/');
     parts.push(`${f}→${t}`);
@@ -942,9 +945,9 @@ function renderMyPanel() {
       <div class="cmp-row"><span class="cmp-metric">Casos</span><span class="cmp-val" style="color:var(--cyan)">${team.totalCases.toLocaleString('pt-BR')}</span></div>
       <div class="cmp-row"><span class="cmp-metric">Labels</span><span class="cmp-val">${team.totalLabels.toLocaleString('pt-BR')}</span></div>
       <div class="cmp-row"><span class="cmp-metric">Time Spent</span><span class="cmp-val">${team.totalMin.toLocaleString('pt-BR')} min</span></div>
-      <div class="cmp-row"><span class="cmp-metric">Assertividade</span><span class="cmp-val" style="color:var(--green)">95,3%</span></div>
-      <div class="cmp-row"><span class="cmp-metric">Erro Processo</span><span class="cmp-val" style="color:var(--yellow)">28,9%</span></div>
-      <div class="cmp-row"><span class="cmp-metric">Side Effect NOK</span><span class="cmp-val" style="color:var(--red)">11,5%</span></div>
+      <div class="cmp-row"><span class="cmp-metric">Assertividade</span><span class="cmp-val" style="color:var(--green)">94,3%</span></div>
+      <div class="cmp-row"><span class="cmp-metric">Erro Processo</span><span class="cmp-val" style="color:var(--yellow)">27,6%</span></div>
+      <div class="cmp-row"><span class="cmp-metric">Side Effect NOK</span><span class="cmp-val" style="color:var(--red)">8,1%</span></div>
     </div>
     <div class="cmp-col" style="background:${indBg};border:2px solid ${indBorder}">
       <div class="cmp-head" style="color:${a.color}">👤 Sua Entrega</div>
@@ -982,7 +985,7 @@ function renderMyPanel() {
 function buildShareUrl() {
   const p = new URLSearchParams();
   if(state.from !== '2026-02-20') p.set('from', state.from);
-  if(state.to   !== '2026-03-27') p.set('to',   state.to);
+  if(state.to   !== '2026-04-01') p.set('to',   state.to);
   if(state.analyst !== 'all')     p.set('t', TOKEN_BY_AGENT[state.analyst]);
   return window.location.pathname + (p.toString() ? '?'+p.toString() : '');
 }
@@ -1032,7 +1035,7 @@ document.getElementById('analystSelect').addEventListener('change', e => {
 });
 
 function resetFilters() {
-  state = { from:'2026-02-20', to:'2026-03-27', analyst:'all' };
+  state = { from:'2026-02-20', to:'2026-04-01', analyst:'all' };
   document.getElementById('dateFrom').value = state.from;
   document.getElementById('dateTo').value   = state.to;
   document.getElementById('analystSelect').value = 'all';
