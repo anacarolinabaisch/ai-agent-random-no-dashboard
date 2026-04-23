@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Baixar repositório
+      - name: Baixar repositorio
         uses: actions/checkout@v4
 
       - name: Configurar Python
@@ -18,20 +18,20 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Instalar dependências
+      - name: Instalar dependencias
         run: pip install databricks-sql-connector
 
-      - name: Rodar script de atualização
+      - name: Rodar script de atualizacao
         env:
           DATABRICKS_HOST: nubank-e2-general.cloud.databricks.com
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
           DATABRICKS_HTTP_PATH: /sql/1.0/warehouses/5697b7d8242e3d90
         run: python update_dashboard.py
 
-      - name: Salvar HTML atualizado no repositório
+      - name: Salvar HTML atualizado
         run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html
-          git diff --staged --quiet || git commit -m "Dashboard atualizado automaticamente - $(date '+%d/%m/%Y')"
+          git diff --staged --quiet || git commit -m "Dashboard atualizado - $(date '+%d/%m/%Y')"
           git push
